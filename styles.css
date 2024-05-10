@@ -1,5 +1,24 @@
 *{
-      color: white;
-      background-color: #e04923;
+      color: rgb(88, 88, 88);
       font-family: 'Poppins', sans-serif;
+}
+
+body {
+      background-color: #e04923;
+}
+
+main {
+      background-color: white;
+      width: 560px;
+      margin: auto;
+      padding: 10px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.486);
+}
+
+footer {
+      background-color: white;
+      width: 560px;
+      margin: auto;
+      padding: 10px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.486);
 }
