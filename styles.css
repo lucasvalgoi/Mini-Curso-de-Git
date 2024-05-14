@@ -7,8 +7,22 @@ body {
       background-color: #e04923;
 }
 
+main .h1-principal {
+      font-size: 46px;
+      color: #e04923;
+}
+
+main .h3-principal {
+      font-size: 20px;
+      color: black;
+      padding-bottom: 6px;
+}
+
+main p {
+      font-size: 20px;
+}
+
 main {
-      font-size: 22px;
       background-color: white;
       width: 560px;
       margin: auto;
