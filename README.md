@@ -8,3 +8,9 @@ Neste mini curso desenvolvido pelo canal Código Fonte TV, aprendi as principais
      - `$ git config --global user.email "#"`
 - Listar Configs Globais;
      - `$ git config --global --list`
+- Criar uma nova Pasta pelo Terminal;
+     - `$ mkdir nome_da_pasta`
+- Criar um arquivo pelo Terminal;
+     - `$ touch nome_do_arquivo`
+- Navegar até a Pasta/arquivo criada;
+     - `$ cd ./nome_da_pasta(ou arquivo)`
