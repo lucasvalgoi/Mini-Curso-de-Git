@@ -1,4 +1,7 @@
-function somaTeste (num1, num2) {
-      return num1 + num2;
+function entrarNoCurso() {
+      console.log("Entrou no curso");
 }
-console.log(somaTeste(3, 10))
+
+function sairDoCurso() {
+      console.log("Saiu do curso");
+}
