@@ -14,3 +14,18 @@ Neste mini curso desenvolvido pelo canal Código Fonte TV, aprendi as principais
      - `$ touch nome_do_arquivo`
 - Navegar até a Pasta/arquivo criada;
      - `$ cd ./nome_da_pasta(ou arquivo)`
+- Iniciar um repositório Git;
+     - `$ git init`
+- Listar todos os arquivos de uma pasta;
+     - `$ ls ./nome_da_pasta`
+- Abrir o VS Code pelo terminal;
+     - `$ code .`
+- Adicionar um ou todos os arquivos à _Staging Area_;
+     - `$ git add nome_do_arquivo`
+     - `$ git add .`
+- Ver os status dos arquivos;
+     - `$ git status`
+- Discartar mundaças do diretório de trabalho restaurando a versão mais recente;
+     - `$ git restore nome_do_arquivo`
+- Desfazer as mudanças de um arquivo do diretório de trabalho;
+     - `$ git reset nome_do_arquivo`
