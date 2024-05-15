@@ -20,12 +20,50 @@ Neste mini curso desenvolvido pelo canal Código Fonte TV, aprendi as principais
      - `$ ls ./nome_da_pasta`
 - Abrir o VS Code pelo terminal;
      - `$ code .`
-- Adicionar um ou todos os arquivos à _Staging Area_;
+- Adicionar um ou todos os arquivos à _Staging Area_ & Adicionar os arquivos que ainda não estão no Stage;
      - `$ git add nome_do_arquivo`
      - `$ git add .`
+     - `$ git add -A`
+- Clonar um repositório remoto;
+     - `$ git clone https://url_do_repositório_remoto`
 - Ver os status dos arquivos;
      - `$ git status`
-- Discartar mundaças do diretório de trabalho restaurando a versão mais recente;
-     - `$ git restore nome_do_arquivo`
 - Desfazer as mudanças de um arquivo do diretório de trabalho;
      - `$ git reset nome_do_arquivo`
+- Discartar mundaças do diretório de trabalho restaurando a versão mais recente;
+     - `$ git restore nome_do_arquivo`
+- Ver as diferenças de um arquivo com diferentes versões (é melhor sempre ver pelo VS Code);
+     - `$ git diff nome_do_arquivo`
+- Ver as diffs da versão de um arquivo commitado e na área de Stage;
+     - `$ git diff --staged`
+- Fazer um commit & adicionar os arquivo ao Stage simultaneamente;
+     - `$ git commit -a -m "#"`
+- Desfazer as mudanças do *último* commit sem fazer um novo commit;
+     - `$ git commit --amend -m "#"`
+- Adicionar um repositório remoto;
+     - `$ git remote add origin git@url_do_repositório_remoto`
+- Remover o repositório remoto;
+     - `$ git remote remove origin`
+- Ver informações mais completas sobre o repositório remoto;
+     - `$ git remote show origin`
+- Ver nome da branch e URL's para acessar o repositório remoto;
+     - `$ git remote -v`
+- Mudar a URL do repositório remoto;
+     - `$ git remote set-url origin nova_url`
+- Ver Histórico de commits completo & Em uma única linha & Escolher a quantidade dos últimos commits & Ver o histórico de uma pasta específica & Ver o histórico de commits resumido & Ver a organização em gráfico & Ver commits de um autor específico & Ver commits de uma Específica data;
+     - `$ git log`
+     - `$ git log --oneline`
+     - `$ git log -5`
+     - `$ git log nome_da_pasta/`
+     - `$ git shortlog`
+     - `$ git log --graph`
+     - `$ git log --author="nome_do_autor"`
+     - `$ git log --before OU --since OU --until="YYYY-MM-DD"`
+- Enviar as mudanças para o repositório remoto;
+     - `$ git push -u origin main`
+- Puxar ou atualizar as mudanças feitas no repositório remoto para o repo. local;
+     - `$ git pull origin main`
+- Criar uma nova Branch (ramificação);
+     - `$ git branch "nova_branch"`
+- Criar uma nova branch & Trocar para ela simultaneamente;
+     - `$ git checkout -b "nova_branch"`
