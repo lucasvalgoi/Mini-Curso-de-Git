@@ -50,20 +50,86 @@ Neste mini curso desenvolvido pelo canal Código Fonte TV, aprendi as principais
      - `$ git remote -v`
 - Mudar a URL do repositório remoto;
      - `$ git remote set-url origin nova_url`
-- Ver Histórico de commits completo & Em uma única linha & Escolher a quantidade dos últimos commits & Ver o histórico de uma pasta específica & Ver o histórico de commits resumido & Ver a organização em gráfico & Ver commits de um autor específico & Ver commits de uma Específica data;
-     - `$ git log`
-     - `$ git log --oneline`
-     - `$ git log -5`
-     - `$ git log nome_da_pasta/`
-     - `$ git shortlog`
-     - `$ git log --graph`
-     - `$ git log --author="nome_do_autor"`
-     - `$ git log --before OU --since OU --until="YYYY-MM-DD"`
 - Enviar as mudanças para o repositório remoto;
      - `$ git push -u origin main`
-- Puxar ou atualizar as mudanças feitas no repositório remoto para o repo. local;
+- Puxar ou atualizar as mudanças feitas no repositório remoto para o repo. local e diretório de trabalho, copiando-as;
      - `$ git pull origin main`
-- Criar uma nova Branch (ramificação);
+- Fazer downloads, puxar ou atualizar as mudanças de tudo feito em um repositório remoto para o repo. local, copiando-as;
+     - `$ git fetch origin`
+     - `$ git fetch URL_do_repositório_remoto`
+- Criar uma nova Branch (ramificação) ou ver as branches criadas;
      - `$ git branch "nova_branch"`
+     - `$ git branch`
 - Criar uma nova branch & Trocar para ela simultaneamente;
      - `$ git checkout -b "nova_branch"`
+- Mudar o nome de uma branch;
+     - `$ git branch -m nome_da_branch`
+- Deletar uma branch;
+     - `$ git branch -D nome_da_branch`
+- Unir mudanças de uma branch para outra criando um novo commit;
+     - `$ git merge nome _da_branch`
+- Cancelar as mudanças de um merge (caso esteja em um conflito);
+     - `$ git merge --abort`
+- Continuar um merge após a resolução do(s) conflito(s);
+     - `$ git merge --continue`
+- Unir mudanças de uma branch para outra sem criar um novo commit (movendo todo o histórico de commits da branch de *origem*, para a branch de *destino*), antes, certifique-se que está na branch de destino;
+     - `$ git rebase branch_de_origem`
+- Fazer o Rebase, movendo apenas um número específico dos últimos commits;
+     - `$ git rebase -i HEAD~nº_últimos_commits`
+- Cancelar as mudanças de um rebase (caso esteja em um conflito);
+     - `$ git rebase --abort`
+- Continuar um rebase após a resolução do(s) conflito(s);
+     - `$ git rebase --continue`
+- ### Uso do Log (Histórico de commits);
+- Ver Histórico de commits completo;
+     - `$ git log`
+- Em uma única linha;
+     - `$ git log --oneline`
+- Escolher a quantidade dos últimos commits;
+     - `$ git log -nºúltimos_commits`
+- Ver o histórico de uma pasta específica;
+     - `$ git log nome_da_pasta/`
+- Ver a organização em gráfico;
+     - `$ git log --graph`
+- Ver commits de um autor específico;
+     - `$ git log --author="nome_do_autor"`
+- Ver commits de uma Específica data;
+     - `$ git log --before OU --since OU --until="YYYY-MM-DD"`
+- Ver o histórico de commits resumido;
+     - `$ git shortlog`
+- ### Uso de Tags;
+- Ver todas as tags criadas;
+     - `$ git tag`
+- Criar uma tag __*Leve*__;
+     - `$ git tag nome_da_tag`
+- Deletar uma tag;
+     - `$ git tag -d nome_da_tag`
+- Criar uma tag __*Anotada*__;
+     - `$ git tag -a nome_da_tag -m "mensagem_da_tag"`
+- Ver as mudanças feitas nesta tag;
+     - `$ git show nome_da_tag`
+- Criar uma tag __*Assinada*__ (antes de criá-la, certifique-se de que você configurou essa assinatura de arquivo);
+     - `$ git tag -s nome_da_tag -m "mensagem_da_tag"`
+- Enviar uma tag específica para o repositório remoto;
+     - `$ git push origin nome_da_tag`
+- Deletar o push da tag do repositório remoto;
+     - `$ git push origin --delete nome_da_tag`
+- ### Revertendo ações rapidamente e desfazendo 💩;
+- Desfazer a mudança de um arquivo que está apenas no diretório de trabalho;
+     - `$ git checkout -- nome_do_arquivo`
+- Desfazer a mudança de um arquivo que já foi adicionado ao Stage;
+     - `$ git reset --hard HEAD`
+- Desfazer a mudança de um arquivo que já foi commitado;
+     - `$ git reset --hard HEAD~nºúltimos_commits`
+- Reverter um commit anterior, criando um novo commit com essa *reversão*;
+     - `$ git revert hash_do_commit`
+- Mudar de branch sem perder o que foi feito, sem precisar commitar;
+     - `$ git stash
+        $ git checkout outra_branch
+        $ git stash pop`
+- Mudar de branch sem perder o que foi feito, sem precisar commitar (mantendo essas mudanças no *stash*, caso precise usar novamente);
+     - `$ git stash
+        $ git checkout outra_branch
+        $ git stash apply`
+- Forçar um push no repositório remoto (nesse caso para reverter o commit);
+     - `$ git push origin main --force`
